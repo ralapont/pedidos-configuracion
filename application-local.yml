@@ -2,14 +2,6 @@ server:
   port: 8092
 
 spring:
-  application:
-    name: PRODUCTOSERVICIO
-  datasource:
-    url: jdbc:postgresql://localhost:5433/productosdb
-    username: admin
-    password: admin123
-    driver-class-name: org.postgresql.Driver
-
   jpa:
     hibernate:
       ddl-auto: update
@@ -25,7 +17,6 @@ spring:
   # Opcional: configuración de zona horaria
   jackson:
     time-zone: Europe/Madrid
-
 
 eureka:
   client:
