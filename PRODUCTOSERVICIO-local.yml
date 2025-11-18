@@ -1,9 +1,6 @@
 server:
   port: 8092
 
-spring:
-  application:
-    name: PRODUCTOSERVICIO
   datasource:
     url: jdbc:postgresql://localhost:5433/productosdb
     username: admin
