@@ -34,6 +34,18 @@ eureka:
     ip-address: 127.0.0.1
     instance-id: ${spring.application.name}:${eureka.instance.ip-address}:${server.port}
 
+management:
+  server:
+    base-path: /actuator
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
 cliente-service:
   url: http://localhost:8090
 producto-service:

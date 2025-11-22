@@ -16,6 +16,17 @@ spring:
         format_sql: true
         show_sql: true
 
+management:
+  server:
+    base-path: /actuator
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  metrics:
+    export:
+      prometheus:
+        enabled: true
 
 eureka:
   client:
