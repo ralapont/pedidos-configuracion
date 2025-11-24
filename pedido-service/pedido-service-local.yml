@@ -51,6 +51,24 @@ management:
   zipkin:
     endpoint: http://localhost:9411/api/v2/spans
 
+resilience4j:
+  circuitbreaker:
+    instances:
+      clientesCB:
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+      productosCB:
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+  retry:
+    instances:
+      clientesCB:
+        maxAttempts: 3
+        waitDuration: 500ms
+      productosCB:
+        maxAttempts: 3
+        waitDuration: 500ms
+
 cliente-service:
   url: http://localhost:8090
 producto-service:
