@@ -34,6 +34,10 @@ eureka:
     ip-address: 127.0.0.1
     instance-id: ${spring.application.name}:${eureka.instance.ip-address}:${server.port}
 
+feign:
+  okhttp:
+    enabled: true
+
 management:
   server:
     base-path: /actuator
