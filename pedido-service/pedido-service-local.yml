@@ -35,6 +35,8 @@ eureka:
     instance-id: ${spring.application.name}:${eureka.instance.ip-address}:${server.port}
 
 feign:
+  httpclient:
+    enabled: false
   okhttp:
     enabled: true
 
@@ -77,3 +79,7 @@ cliente-service:
   url: http://localhost:8090
 producto-service:
   url: http://localhost:8090
+
+logging:
+  level:
+    org.springframework.cloud.openfeign: DEBUG
