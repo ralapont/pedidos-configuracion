@@ -79,10 +79,8 @@ resilience4j:
         maxAttempts: 3
         waitDuration: 500ms
 
-cliente-service:
-  url: http://localhost:8090
-producto-service:
-  url: http://localhost:8090
+cliente.service.url: http://localhost:8090
+producto.service.url: http://localhost:8090
 
 logging:
   level:
