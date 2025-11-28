@@ -31,6 +31,12 @@ spring:
     properties:
       schema.registry.url: http://localhost:8081
 
+# En application.yml o tu archivo de configuración específico
+kafka:
+  topicos:
+    clientes: errores-clientes # <-- Nueva propiedad para el tópico de clientes
+    pedidos: errores-producto
+
 eureka:
   client:
     service-url:
